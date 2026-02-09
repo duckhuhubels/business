@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CanineConnect Assistant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #2D5A27;
+      --meadow: #A4C639;
+      --linen: #FDFBF7;
+      --bark: #5D4037;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--linen);
+      color: var(--bark);
+      background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+    }
+    .font-secondary {
+      font-family: 'Quicksand', sans-serif;
+    }
+    .leaf-bubble {
+      border-radius: 20px;
+      position: relative;
+    }
+    .leaf-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -10px;
+      width: 20px;
+      height: 20px;
+      background: inherit;
+      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    }
+    .user-bubble::after {
+      left: auto;
+      right: -10px;
+      clip-path: polygon(0 0, 0 100%, 100% 100%);
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(45, 90, 39, 0.05);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--forest);
+      border-radius: 10px;
+    }
+    .wag-hover:hover {
+      animation: wag 0.3s ease-in-out infinite alternate;
+    }
+    @keyframes wag {
+      from { transform: rotate(-2deg); }
+      to { transform: rotate(2deg); }
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>

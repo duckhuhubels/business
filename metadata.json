@@ -1,0 +1,7 @@
+{
+  "name": "CanineConnect Assistant",
+  "description": "A loyal dog-themed virtual assistant for entrepreneurs, blending nature's tranquility with the dependable support of man's best friend.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
